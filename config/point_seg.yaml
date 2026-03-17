@@ -1,0 +1,27 @@
+point_seg_node:
+  ros__parameters:
+    image_topic: /image_raw
+    lidar_topic: /livox/lidar
+
+    painted_cloud_topic: /yolo_seg/painted_cloud
+    projected_image_topic: /yolo_seg/projected_image
+
+    camera_intrinsic_yaml: /home/nuc14/work/ros2_ws/src/camera_lidar_calibration/config/camera_intrinsic_calibration.yaml
+    camera_extrinsic_yaml: /home/nuc14/work/ros2_ws/src/camera_lidar_calibration/config/camera_extrinsic_calibration.yaml
+
+    model_path: /home/nuc14/work/model/roboracer_v11n_seg_openvino_model
+    device: auto
+    conf: 0.82
+    iou: 0.45
+
+    publish_projected_image: true
+    overlay_segmentation_mask: false
+    overlay_segmentation_alpha: 0.35
+    profile_timing: true
+
+    passthrough_x_min: 0.0
+    passthrough_x_max: 120.0
+    passthrough_y_abs_max: 60.0
+    passthrough_z_min: -5.0
+    passthrough_z_max: 5.0
+    voxel_leaf_size: 0.10
